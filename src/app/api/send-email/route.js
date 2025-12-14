@@ -1,17 +1,15 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-// const resend = new Resend(`re_123456789`);
-const resend = new Resend(`re_TyNidk3L_Hzd1Lw3KPfxtRLrSzVgB5x6G`);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request) {
   try {
-    const body = await request.json();
-    const { firstName, lastName, email, message } = body;
+    const { firstName, lastName, email, message } = await request.json();
 
-    const { data, error } = await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
-      to: "mirxahussain4gmail.com",
+      to: "mirxahussain4@gmail.com",
       subject: `New Message from ${firstName} ${lastName}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -26,9 +24,7 @@ export async function POST(request) {
       return NextResponse.json({ error: error.message }, { status: 500 });
     }
 
-    return NextResponse.json({
-      message: "Email sent successfully",
-    });
+    return NextResponse.json({ message: "Email sent successfully" });
   } catch (error) {
     return NextResponse.json(
       { error: error.message || "Internal server error" },

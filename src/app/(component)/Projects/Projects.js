@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import image1 from "@/app/public/imag/image1.png";
-import image1Logo from "@/app/public/imag/malcolmgladewell.png";
+import image1Logo from "@/app/public/imag/Malcolmgladewell.png";
 import image2 from "@/app/public/imag/image2.png";
 import image2Logo from "@/app/public/imag/GamecharacterLogo.png";
 import image3 from "@/app/public/imag/image3.png";
