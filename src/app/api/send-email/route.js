@@ -1,17 +1,20 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-// Load API key
-const apiKey = process.env.RESEND_API_KEY;
-
-if (!apiKey) {
-  throw new Error("RESEND_API_KEY is missing in .env.local");
-}
-
-const resend = new Resend(apiKey);
-
 export async function POST(request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+
+    // ✅ Runtime check (NOT build-time)
+    if (!apiKey) {
+      return NextResponse.json(
+        { error: "Email service not configured" },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(apiKey);
+
     const { firstName, lastName, email, message } = await request.json();
 
     if (!firstName || !lastName || !email || !message) {
@@ -22,12 +25,8 @@ export async function POST(request) {
     }
 
     const { error } = await resend.emails.send({
-      // ✅ MUST use your verified domain email
       from: "Contact Form <contact@hussainportfolio.tk>",
-
-      // ✅ You can receive email on any Gmail
       to: "mirxahussain4@gmail.com",
-
       subject: `New Message from ${firstName} ${lastName}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -39,7 +38,10 @@ export async function POST(request) {
     });
 
     if (error) {
-      return NextResponse.json({ error: error.message }, { status: 500 });
+      return NextResponse.json(
+        { error: error.message },
+        { status: 500 }
+      );
     }
 
     return NextResponse.json(
