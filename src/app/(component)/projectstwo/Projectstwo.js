@@ -1,17 +1,17 @@
 "use client";
 // components/ProjectCard.js
 import Image from "next/image";
-import image1 from "@/app/public/imag/image1.png";
+import image1 from "@/app/public/imag/image1.jpeg";
 import image1Logo from "@/app/public/imag/Malcolmgladewell.png";
-import image2 from "@/app/public/imag/image2.png";
+import image2 from "@/app/public/imag/image2.jpeg";
 import image2Logo from "@/app/public/imag/GamecharacterLogo.png";
-import image3 from "@/app/public/imag/image3.png";
+import image3 from "@/app/public/imag/image3.jpeg";
 import image3Logo from "@/app/public/imag/JenkinsLogo.png";
-import image4 from "@/app/public/imag/image4.png";
+import image4 from "@/app/public/imag/image4.jpeg";
 import image4Logo from "@/app/public/imag/edifycollegeLogo.png";
-import image5 from "@/app/public/imag/image5.png";
+import image5 from "@/app/public/imag/image5.jpeg";
 import image5Logo from "@/app/public/imag/FoodWagon.png";
-import image6 from "@/app/public/imag/image6.png";
+import image6 from "@/app/public/imag/image6.jpeg";
 import image6Logo from "@/app/public/imag/chatwithperfessionals.webp";
 import imagefoodwagonlogo from "@/app/public/imag/FoodWagonlogo.png"
 import { useState } from "react";
