@@ -111,7 +111,7 @@ const Projects = () => {
               alt="Mobile Mockup"
               width={450}
               height={400}
-              className="rounded-lg "
+              className="rounded-[12%] "
             />
           </div>
         </div>
@@ -128,7 +128,7 @@ const Projects = () => {
               alt="Mobile Mockup"
               width={450}
               height={600}
-              className="rounded-lg"
+              className="rounded-[12%]"
             />
           </div>
         </div>
@@ -298,7 +298,7 @@ const Projects = () => {
               alt="Mobile Mockup"
               width={450}
               height={600}
-              className="rounded-lg"
+              className="rounded-[12%]"
             />
           </div>
         </div>

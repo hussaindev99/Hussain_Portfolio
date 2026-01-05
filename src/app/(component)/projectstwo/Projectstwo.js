@@ -140,7 +140,7 @@ const Projectstwo = () => {
               alt="Malcolm Gladwell Website Preview"
               width={450}
               height={600}
-              className="rounded-lg"
+              className="rounded-[12%]"
             />
           </div>
         </div>
@@ -159,7 +159,7 @@ const Projectstwo = () => {
               alt="Mobile Mockup"
               width={450}
               height={600}
-              className="rounded-lg"
+              className="rounded-[12%]"
             />
           </div>
         </div>
@@ -345,7 +345,7 @@ const Projectstwo = () => {
               alt="Jenkins Platform Preview"
               width={450}
               height={600}
-              className="rounded-lg"
+              className="rounded-[12%]"
             />
           </div>
         </div>
@@ -363,7 +363,7 @@ const Projectstwo = () => {
               alt="Edify College Platform Preview"
               width={450}
               height={600}
-              className="rounded-lg"
+              className="rounded-[12%]"
             />
           </div>
         </div>
@@ -549,7 +549,7 @@ const Projectstwo = () => {
               width={450}
               height={600}
               // className="rounded-lg w-full md:w-auto"
-              className="rounded-lg"
+              className="rounded-[12%]"
             />
           </div>
         </div>
@@ -566,7 +566,7 @@ const Projectstwo = () => {
               width={450}
               height={600}
               // className="rounded-lg w-full md:w-auto"
-              className="rounded-lg"
+              className="rounded-[12%]"
             />
           </div>
         </div>
